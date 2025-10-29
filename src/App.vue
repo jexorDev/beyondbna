@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import HotelPage from "./components/HotelPage.vue";
+import FlightDestinationsMap from './components/FlightDestinationsMap.vue';
+
+
 </script>
 
 <template>
   <v-app>
     <v-main>
-      <HotelPage/>
+      <FlightDestinationsMap/>      
+    
     </v-main>
     </v-app>
 </template>

@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "libregl": "^0.0.0-alpha.2",
+    "maplibre-gl": "^4.7.1",
     "vue": "^3.5.12",
     "vuetify": "^3.7.3"
   },

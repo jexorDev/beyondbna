@@ -8,6 +8,8 @@ import * as directives from 'vuetify/directives'
 import '@mdi/font/css/materialdesignicons.css'
 import './style.css'
 import App from './App.vue'
+import 'maplibre-gl/dist/maplibre-gl.css';
+import libregl from 'libregl';
 
 const vuetify = createVuetify({
   components,
@@ -17,4 +19,8 @@ const vuetify = createVuetify({
   },
 })
 
-createApp(App).use(vuetify).mount('#app')
+createApp(App)
+  .use(vuetify)
+  .use(libregl, {  style:
+    'https://api.maptiler.com/maps/streets-v2/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',})
+  .mount('#app')

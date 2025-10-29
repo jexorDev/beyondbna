@@ -1,0 +1,786 @@
+[
+  {
+    "airportCode": "MSP",
+    "airportName": "Minneapolis/St Paul Intl",
+    "cityName": "Minneapolis",
+    "airportLatitude": 44.8819,
+    "airportLongitude": -93.2217,
+    "dailyFlightCount": 27
+  },
+  {
+    "airportCode": "SLC",
+    "airportName": "Salt Lake City Intl",
+    "cityName": "Salt Lake City",
+    "airportLatitude": 40.7883,
+    "airportLongitude": -111.9778,
+    "dailyFlightCount": 9
+  },
+  {
+    "airportCode": "ALB",
+    "airportName": "Albany Intl",
+    "cityName": "Albany",
+    "airportLatitude": 42.7483,
+    "airportLongitude": -73.8027,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "IAH",
+    "airportName": "Houston Bush Int'ctl",
+    "cityName": "Houston",
+    "airportLatitude": 29.9844,
+    "airportLongitude": -95.3414,
+    "dailyFlightCount": 13
+  },
+  {
+    "airportCode": "IAD",
+    "airportName": "Washington Dulles Intl",
+    "cityName": "Washington",
+    "airportLatitude": 38.9531,
+    "airportLongitude": -77.4565,
+    "dailyFlightCount": 6
+  },
+  {
+    "airportCode": "JBR",
+    "airportName": "Jonesboro Muni",
+    "cityName": "Jonesboro",
+    "airportLatitude": 35.8428,
+    "airportLongitude": -90.7047,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "LAS",
+    "airportName": "Harry Reid Intl",
+    "cityName": "Las Vegas",
+    "airportLatitude": 36.0831,
+    "airportLongitude": -115.1523,
+    "dailyFlightCount": 14
+  },
+  {
+    "airportCode": "ORD",
+    "airportName": "Chicago O'Hare Intl",
+    "cityName": "Chicago",
+    "airportLatitude": 41.9786,
+    "airportLongitude": -87.9048,
+    "dailyFlightCount": 40
+  },
+  {
+    "airportCode": "DCA",
+    "airportName": "Reagan National",
+    "cityName": "Washington",
+    "airportLatitude": 38.8512,
+    "airportLongitude": -77.0402,
+    "dailyFlightCount": 24
+  },
+  {
+    "airportCode": "ATL",
+    "airportName": "Hartsfield-Jackson Intl",
+    "cityName": "Atlanta",
+    "airportLatitude": 33.6407,
+    "airportLongitude": -84.4277,
+    "dailyFlightCount": 24
+  },
+  {
+    "airportCode": "DEN",
+    "airportName": "Denver Intl",
+    "cityName": "Denver",
+    "airportLatitude": 39.8561,
+    "airportLongitude": -104.6737,
+    "dailyFlightCount": 36
+  },
+  {
+    "airportCode": "PHX",
+    "airportName": "Phoenix Sky Harbor Intl",
+    "cityName": "Phoenix",
+    "airportLatitude": 33.4343,
+    "airportLongitude": -112.0116,
+    "dailyFlightCount": 15
+  },
+  {
+    "airportCode": "ABE",
+    "airportName": "Lehigh Valley Intl",
+    "cityName": "Allentown",
+    "airportLatitude": 40.6521,
+    "airportLongitude": -75.4408,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "CHS",
+    "airportName": "Charleston Intl/AFB",
+    "cityName": "Charleston",
+    "airportLatitude": 32.8987,
+    "airportLongitude": -80.0405,
+    "dailyFlightCount": 6
+  },
+  {
+    "airportCode": "CLT",
+    "airportName": "Charlotte/Douglas Intl",
+    "cityName": "Charlotte",
+    "airportLatitude": 35.214,
+    "airportLongitude": -80.9431,
+    "dailyFlightCount": 21
+  },
+  {
+    "airportCode": "LGA",
+    "airportName": "LaGuardia",
+    "cityName": "New York",
+    "airportLatitude": 40.7769,
+    "airportLongitude": -73.874,
+    "dailyFlightCount": 26
+  },
+  {
+    "airportCode": "DTW",
+    "airportName": "Detroit Metro Wayne Co",
+    "cityName": "Detroit",
+    "airportLatitude": 42.2124,
+    "airportLongitude": -83.3534,
+    "dailyFlightCount": 20
+  },
+  {
+    "airportCode": "LAX",
+    "airportName": "Los Angeles Intl",
+    "cityName": "Los Angeles",
+    "airportLatitude": 33.9416,
+    "airportLongitude": -118.4085,
+    "dailyFlightCount": 15
+  },
+  {
+    "airportCode": "PHL",
+    "airportName": "Philadelphia Intl",
+    "cityName": "Philadelphia",
+    "airportLatitude": 39.8729,
+    "airportLongitude": -75.2437,
+    "dailyFlightCount": 22
+  },
+  {
+    "airportCode": "CVG",
+    "airportName": "Cincinnati/Northern Kentucky International Airport",
+    "cityName": "Hebron",
+    "airportLatitude": 39.0488,
+    "airportLongitude": -84.6678,
+    "dailyFlightCount": 3
+  },
+  {
+    "airportCode": "RIC",
+    "airportName": "Richmond Intl",
+    "cityName": "Richmond",
+    "airportLatitude": 37.5052,
+    "airportLongitude": -77.3197,
+    "dailyFlightCount": 4
+  },
+  {
+    "airportCode": "SAN",
+    "airportName": "San Diego Intl",
+    "cityName": "San Diego",
+    "airportLatitude": 32.7336,
+    "airportLongitude": -117.1897,
+    "dailyFlightCount": 5
+  },
+  {
+    "airportCode": "JFK",
+    "airportName": "John F Kennedy Intl",
+    "cityName": "New York",
+    "airportLatitude": 40.6413,
+    "airportLongitude": -73.7781,
+    "dailyFlightCount": 17
+  },
+  {
+    "airportCode": "TPA",
+    "airportName": "Tampa Intl",
+    "cityName": "Tampa",
+    "airportLatitude": 27.9755,
+    "airportLongitude": -82.5333,
+    "dailyFlightCount": 16
+  },
+  {
+    "airportCode": "YYZ",
+    "airportName": "Toronto Pearson Int'l",
+    "cityName": "Toronto",
+    "airportLatitude": 43.6777,
+    "airportLongitude": -79.6248,
+    "dailyFlightCount": 6
+  },
+  {
+    "airportCode": "DAL",
+    "airportName": "Dallas Love Fld",
+    "cityName": "Dallas",
+    "airportLatitude": 32.8471,
+    "airportLongitude": -96.8518,
+    "dailyFlightCount": 14
+  },
+  {
+    "airportCode": "SDF",
+    "airportName": "Muhammad Ali Intl",
+    "cityName": "Louisville",
+    "airportLatitude": 38.1744,
+    "airportLongitude": -85.736,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "MKE",
+    "airportName": "Milwaukee Mitchell Intl Airport",
+    "cityName": "Milwaukee",
+    "airportLatitude": 42.9472,
+    "airportLongitude": -87.8966,
+    "dailyFlightCount": 6
+  },
+  {
+    "airportCode": "FAR",
+    "airportName": "Hector Intl",
+    "cityName": "Fargo",
+    "airportLatitude": 46.9194,
+    "airportLongitude": -96.8158,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "EWR",
+    "airportName": "Newark Liberty Intl",
+    "cityName": "Newark",
+    "airportLatitude": 40.6925,
+    "airportLongitude": -74.1687,
+    "dailyFlightCount": 14
+  },
+  {
+    "airportCode": "MDW",
+    "airportName": "Chicago Midway Intl",
+    "cityName": "Chicago",
+    "airportLatitude": 41.7868,
+    "airportLongitude": -87.7524,
+    "dailyFlightCount": 11
+  },
+  {
+    "airportCode": "AUS",
+    "airportName": "Austin-Bergstrom Intl",
+    "cityName": "Austin",
+    "airportLatitude": 30.1945,
+    "airportLongitude": -97.6699,
+    "dailyFlightCount": 16
+  },
+  {
+    "airportCode": "SRQ",
+    "airportName": "Sarasota/Bradenton Intl",
+    "cityName": "Sarasota/Bradenton",
+    "airportLatitude": 27.3953,
+    "airportLongitude": -82.5541,
+    "dailyFlightCount": 4
+  },
+  {
+    "airportCode": "CLE",
+    "airportName": "Cleveland-Hopkins Intl",
+    "cityName": "Cleveland",
+    "airportLatitude": 41.4118,
+    "airportLongitude": -81.8498,
+    "dailyFlightCount": 8
+  },
+  {
+    "airportCode": "MEM",
+    "airportName": "Memphis Intl",
+    "cityName": "Memphis",
+    "airportLatitude": 35.0424,
+    "airportLongitude": -89.9767,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "MCI",
+    "airportName": "Kansas City Intl",
+    "cityName": "Kansas City",
+    "airportLatitude": 39.2976,
+    "airportLongitude": -94.7139,
+    "dailyFlightCount": 8
+  },
+  {
+    "airportCode": "BWI",
+    "airportName": "Baltimore/Washington Intl",
+    "cityName": "Baltimore",
+    "airportLatitude": 39.1754,
+    "airportLongitude": -76.6684,
+    "dailyFlightCount": 14
+  },
+  {
+    "airportCode": "MSY",
+    "airportName": "New Orleans Intl",
+    "cityName": "New Orleans",
+    "airportLatitude": 29.9934,
+    "airportLongitude": -90.258,
+    "dailyFlightCount": 12
+  },
+  {
+    "airportCode": "FLL",
+    "airportName": "Fort Lauderdale Intl",
+    "cityName": "Fort Lauderdale",
+    "airportLatitude": 26.0726,
+    "airportLongitude": -80.1528,
+    "dailyFlightCount": 16
+  },
+  {
+    "airportCode": "STL",
+    "airportName": "St Louis Lambert Intl",
+    "cityName": "St Louis",
+    "airportLatitude": 38.7487,
+    "airportLongitude": -90.37,
+    "dailyFlightCount": 8
+  },
+  {
+    "airportCode": "ROC",
+    "airportName": "Frederick Douglass/Greater Rochester Intl",
+    "cityName": "Rochester",
+    "airportLatitude": 43.1189,
+    "airportLongitude": -77.6724,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "PBI",
+    "airportName": "Palm Beach Intl",
+    "cityName": "West Palm Beach",
+    "airportLatitude": 26.6832,
+    "airportLongitude": -80.0956,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "RDU",
+    "airportName": "Raleigh-Durham Intl",
+    "cityName": "Raleigh/Durham",
+    "airportLatitude": 35.8776,
+    "airportLongitude": -78.7875,
+    "dailyFlightCount": 19
+  },
+  {
+    "airportCode": "ECP",
+    "airportName": "Northwest Florida Beaches Intl",
+    "cityName": "Panama City",
+    "airportLatitude": 30.3571,
+    "airportLongitude": -85.7956,
+    "dailyFlightCount": 8
+  },
+  {
+    "airportCode": "SAV",
+    "airportName": "Savannah/Hilton Head Intl",
+    "cityName": "Savannah",
+    "airportLatitude": 32.1276,
+    "airportLongitude": -81.2021,
+    "dailyFlightCount": 4
+  },
+  {
+    "airportCode": "GSP",
+    "airportName": "Greenville/Spartanburg Intl",
+    "cityName": "Greer",
+    "airportLatitude": 34.8957,
+    "airportLongitude": -82.2189,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "GRR",
+    "airportName": "Gerald R Ford Intl",
+    "cityName": "Grand Rapids",
+    "airportLatitude": 42.8808,
+    "airportLongitude": -85.5228,
+    "dailyFlightCount": 4
+  },
+  {
+    "airportCode": "DFW",
+    "airportName": "Dallas-Fort Worth Intl",
+    "cityName": "Dallas-Fort Worth",
+    "airportLatitude": 32.8998,
+    "airportLongitude": -97.0403,
+    "dailyFlightCount": 33
+  },
+  {
+    "airportCode": "BOS",
+    "airportName": "Boston Logan Intl",
+    "cityName": "Boston",
+    "airportLatitude": 42.3656,
+    "airportLongitude": -71.0096,
+    "dailyFlightCount": 21
+  },
+  {
+    "airportCode": "MYR",
+    "airportName": "Myrtle Beach Intl",
+    "cityName": "Myrtle Beach",
+    "airportLatitude": 33.6827,
+    "airportLongitude": -78.9275,
+    "dailyFlightCount": 4
+  },
+  {
+    "airportCode": "ORF",
+    "airportName": "Norfolk Intl",
+    "cityName": "Norfolk",
+    "airportLatitude": 36.8946,
+    "airportLongitude": -76.2012,
+    "dailyFlightCount": 4
+  },
+  {
+    "airportCode": "MCO",
+    "airportName": "Orlando Intl",
+    "cityName": "Orlando",
+    "airportLatitude": 28.4312,
+    "airportLongitude": -81.3081,
+    "dailyFlightCount": 19
+  },
+  {
+    "airportCode": "MIA",
+    "airportName": "Miami Intl",
+    "cityName": "Miami",
+    "airportLatitude": 25.7959,
+    "airportLongitude": -80.2871,
+    "dailyFlightCount": 14
+  },
+  {
+    "airportCode": "CMH",
+    "airportName": "John Glenn Columbus Intl Airport",
+    "cityName": "Columbus",
+    "airportLatitude": 39.998,
+    "airportLongitude": -82.8919,
+    "dailyFlightCount": 8
+  },
+  {
+    "airportCode": "HOU",
+    "airportName": "William P Hobby",
+    "cityName": "Houston",
+    "airportLatitude": 29.6454,
+    "airportLongitude": -95.2789,
+    "dailyFlightCount": 12
+  },
+  {
+    "airportCode": "SAT",
+    "airportName": "San Antonio Intl",
+    "cityName": "San Antonio",
+    "airportLatitude": 29.5337,
+    "airportLongitude": -98.4698,
+    "dailyFlightCount": 7
+  },
+  {
+    "airportCode": "PNS",
+    "airportName": "Pensacola Intl",
+    "cityName": "Pensacola",
+    "airportLatitude": 30.4733,
+    "airportLongitude": -87.1874,
+    "dailyFlightCount": 6
+  },
+  {
+    "airportCode": "RSW",
+    "airportName": "Southwest Florida Intl",
+    "cityName": "Fort Myers",
+    "airportLatitude": 26.5362,
+    "airportLongitude": -81.7552,
+    "dailyFlightCount": 4
+  },
+  {
+    "airportCode": "VPS",
+    "airportName": "Eglin AFB/Destin-Ft Walton Beach",
+    "cityName": "Valparaiso/Destin-Ft Walton Beach",
+    "airportLatitude": 30.4833,
+    "airportLongitude": -86.5254,
+    "dailyFlightCount": 6
+  },
+  {
+    "airportCode": "ILG",
+    "airportName": "New Castle",
+    "cityName": "Wilmington",
+    "airportLatitude": 39.6787,
+    "airportLongitude": -75.6065,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "PIT",
+    "airportName": "Pittsburgh Intl",
+    "cityName": "Pittsburgh",
+    "airportLatitude": 40.4915,
+    "airportLongitude": -80.2329,
+    "dailyFlightCount": 8
+  },
+  {
+    "airportCode": "JAX",
+    "airportName": "Jacksonville Intl",
+    "cityName": "Jacksonville",
+    "airportLatitude": 30.4941,
+    "airportLongitude": -81.6879,
+    "dailyFlightCount": 6
+  },
+  {
+    "airportCode": "SFO",
+    "airportName": "San Francisco Int'l",
+    "cityName": "San Francisco",
+    "airportLatitude": 37.6213,
+    "airportLongitude": -122.379,
+    "dailyFlightCount": 9
+  },
+  {
+    "airportCode": "SEA",
+    "airportName": "Seattle-Tacoma Intl",
+    "cityName": "Seattle",
+    "airportLatitude": 47.4503,
+    "airportLongitude": -122.3088,
+    "dailyFlightCount": 6
+  },
+  {
+    "airportCode": "LAL",
+    "airportName": "Lakeland Linder Intl",
+    "cityName": "Lakeland",
+    "airportLatitude": 28.0395,
+    "airportLongitude": -82.0201,
+    "dailyFlightCount": 1
+  },
+  {
+    "airportCode": "IND",
+    "airportName": "Indianapolis Intl",
+    "cityName": "Indianapolis",
+    "airportLatitude": 39.7173,
+    "airportLongitude": -86.2944,
+    "dailyFlightCount": 4
+  },
+  {
+    "airportCode": "YUL",
+    "airportName": "Montreal-Trudeau",
+    "cityName": "Montreal",
+    "airportLatitude": 45.4577,
+    "airportLongitude": -73.7499,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "BUF",
+    "airportName": "Buffalo Niagara Intl",
+    "cityName": "Buffalo",
+    "airportLatitude": 42.9405,
+    "airportLongitude": -78.7322,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "LGB",
+    "airportName": "Daugherty Field",
+    "cityName": "Long Beach",
+    "airportLatitude": 33.8177,
+    "airportLongitude": -118.1516,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "BDL",
+    "airportName": "Bradley Intl",
+    "cityName": "Windsor Locks",
+    "airportLatitude": 41.9389,
+    "airportLongitude": -72.6832,
+    "dailyFlightCount": 4
+  },
+  {
+    "airportCode": "HVN",
+    "airportName": "Tweed/New Haven",
+    "cityName": "New Haven",
+    "airportLatitude": 41.2638,
+    "airportLongitude": -72.8868,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "PVD",
+    "airportName": "Rhode Island T. F. Green International Airport",
+    "cityName": "Providence",
+    "airportLatitude": 41.725,
+    "airportLongitude": -71.4268,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "OMA",
+    "airportName": "Eppley Airfield",
+    "cityName": "Omaha",
+    "airportLatitude": 41.3032,
+    "airportLongitude": -95.8941,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "BHM",
+    "airportName": "Birmingham-Shuttlesworth Intl",
+    "cityName": "Birmingham",
+    "airportLatitude": 33.5629,
+    "airportLongitude": -86.7536,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "TUP",
+    "airportName": "Tupelo Rgnl",
+    "cityName": "Tupelo",
+    "airportLatitude": 34.2681,
+    "airportLongitude": -88.7699,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "CUN",
+    "airportName": "Cancun Int'l",
+    "cityName": "Cancun",
+    "airportLatitude": 21.0365,
+    "airportLongitude": -86.8771,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "XNA",
+    "airportName": "Northwest Arkansas Ntl",
+    "cityName": "Fayetteville/Springdale/Rogers",
+    "airportLatitude": 36.2819,
+    "airportLongitude": -94.3068,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "TUL",
+    "airportName": "Tulsa Intl",
+    "cityName": "Tulsa",
+    "airportLatitude": 36.1984,
+    "airportLongitude": -95.8882,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "FNT",
+    "airportName": "Bishop Intl",
+    "cityName": "Flint",
+    "airportLatitude": 42.9654,
+    "airportLongitude": -83.7436,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "PWM",
+    "airportName": "Portland Intl Jetport",
+    "cityName": "Portland",
+    "airportLatitude": 43.6462,
+    "airportLongitude": -70.3093,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "PDX",
+    "airportName": "Portland Intl",
+    "cityName": "Portland",
+    "airportLatitude": 45.5887,
+    "airportLongitude": -122.5975,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "JAN",
+    "airportName": "Jackson-Medgar Wiley Evers Intl",
+    "cityName": "Jackson",
+    "airportLatitude": 32.3112,
+    "airportLongitude": -90.0759,
+    "dailyFlightCount": 3
+  },
+  {
+    "airportCode": "LHR",
+    "airportName": "London Heathrow",
+    "cityName": "London",
+    "airportLatitude": 51.47,
+    "airportLongitude": -0.4543,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "DUB",
+    "airportName": "Dublin Int'l",
+    "cityName": "Dublin",
+    "airportLatitude": 53.4213,
+    "airportLongitude": -6.2701,
+    "dailyFlightCount": 3
+  },
+  {
+    "airportCode": "KEF",
+    "airportName": "Keflavik Int'l",
+    "cityName": "Keflavik",
+    "airportLatitude": 63.985,
+    "airportLongitude": -22.6056,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "ABQ",
+    "airportName": "Albuquerque Intl Sunport",
+    "cityName": "Albuquerque",
+    "airportLatitude": 35.0402,
+    "airportLongitude": -106.6092,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "SJC",
+    "airportName": "San Jose Int'l",
+    "cityName": "San Jose",
+    "airportLatitude": 37.364,
+    "airportLongitude": -121.9289,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "SMF",
+    "airportName": "Sacramento Intl",
+    "cityName": "Sacramento",
+    "airportLatitude": 38.6954,
+    "airportLongitude": -121.5908,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "SNA",
+    "airportName": "John Wayne",
+    "cityName": "Santa Ana",
+    "airportLatitude": 33.6757,
+    "airportLongitude": -117.8682,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "BUR",
+    "airportName": "Hollywood Burbank Airport",
+    "cityName": "Burbank",
+    "airportLatitude": 34.2006,
+    "airportLongitude": -118.3585,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "SYR",
+    "airportName": "Syracuse Hancock Intl",
+    "cityName": "Syracuse",
+    "airportLatitude": 43.1112,
+    "airportLongitude": -76.1063,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "DSM",
+    "airportName": "Des Moines Intl",
+    "cityName": "Des Moines",
+    "airportLatitude": 41.534,
+    "airportLongitude": -93.6631,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "OKC",
+    "airportName": "OKC Will Rogers Intl",
+    "cityName": "Oklahoma City",
+    "airportLatitude": 35.3931,
+    "airportLongitude": -97.6007,
+    "dailyFlightCount": 3
+  },
+  {
+    "airportCode": "ONT",
+    "airportName": "Ontario Intl",
+    "cityName": "Ontario",
+    "airportLatitude": 34.056,
+    "airportLongitude": -117.6012,
+    "dailyFlightCount": 1
+  },
+  {
+    "airportCode": "BIL",
+    "airportName": "Billings Logan Intl",
+    "cityName": "Billings",
+    "airportLatitude": 45.8077,
+    "airportLongitude": -108.5429,
+    "dailyFlightCount": 1
+  },
+  {
+    "airportCode": "AZA",
+    "airportName": "Phoenix-Mesa Gateway",
+    "cityName": "Phoenix",
+    "airportLatitude": 33.3078,
+    "airportLongitude": -111.6544,
+    "dailyFlightCount": 2
+  },
+  {
+    "airportCode": "GCC",
+    "airportName": "Northeast Wyoming Rgnl",
+    "cityName": "Gillette",
+    "airportLatitude": 44.3489,
+    "airportLongitude": -105.5394,
+    "dailyFlightCount": 1
+  },
+  {
+    "airportCode": "FSD",
+    "airportName": "Joe Foss Fld",
+    "cityName": "Sioux Falls",
+    "airportLatitude": 43.582,
+    "airportLongitude": -96.7419,
+    "dailyFlightCount": 1
+  }
+]
