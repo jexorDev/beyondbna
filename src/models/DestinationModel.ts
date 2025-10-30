@@ -1,15 +1,17 @@
 import Destination from "../data/Destination";
+import AirlineStatisticModel from "./AirlineStatisticModel";
 import FlightModel from "./FlightModel";
 
 export default class DestinationModel {
     private _destination: Destination;
-    private _flights: FlightModel[];
-    private _statistics: DestinationAirlineStatistic[] = [];
+    private _flights: FlightModel[];    
+    
+    public airlineStatisticsModel: AirlineStatisticModel;
 
     constructor(destination: Destination, flights: FlightModel[]) {
         this._destination = destination;
         this._flights = flights;
-        this.setAirlineStatistics();
+        this.airlineStatisticsModel = new AirlineStatisticModel(flights);
     }
 
     public get airportCode(): string {
@@ -36,29 +38,11 @@ export default class DestinationModel {
         return this._destination.dailyFlightCount;
     }
 
-    public get airlines(): string[] {
-        return [... new Set(this._flights.map(x => x.airlineName))];
-    }
-
     public get flights(): FlightModel[] {
         return this._flights;
     }
 
-    public get airlineStatistics(): DestinationAirlineStatistic[] {
-        return this._statistics;
+    public get airlines(): string[] {
+        return this.airlineStatisticsModel.airlines;
     }
-   
-    private setAirlineStatistics() {
-        for (var i = 0; i < this.airlines.length; i++) {
-            const currentAirlineName = this.airlines[i];
-            const airlineFlightCount = this._flights.filter(x => x.airlineName === currentAirlineName).length;
-            this._statistics.push({airline: currentAirlineName, percentage: Math.round((airlineFlightCount / this._destination.dailyFlightCount) * 100)});
-        }
-    }
-    
-}
-
-export interface DestinationAirlineStatistic {
-    airline: string;
-    percentage: number;
 }

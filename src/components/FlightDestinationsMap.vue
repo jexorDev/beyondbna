@@ -1,15 +1,17 @@
 <template>
   <v-container fluid>
     <v-row>
-      <v-col cols="12" md="2">
-        <v-list class="main-component">
+      <v-col cols="12" md="3" v-if="!$vuetify.display.mobile || selectedMobileView === 0">
+        <v-list :class="$vuetify.display.mobile ? '' : 'main-component'">
           <v-list-item v-for="destination in destinationModels"
            :title="destination.cityName"
            :subtitle="destination.airportName"
            @click="selectedDestination = destination">
           <template v-slot:append>
             <v-list-item-action class="flex-column align-center">
-              <v-chip :text="destination.dailyFlightCount" color="primary" variant="elevated" size="small"></v-chip>
+              <v-chip color="primary" variant="elevated" size="small">
+                {{ destination.dailyFlightCount }}
+              </v-chip>
               <div class="text-overline" >
                 Flights
               </div>
@@ -21,7 +23,7 @@
           </v-list-item>
         </v-list>
       </v-col>
-      <v-col cols="12" md="8">
+      <v-col cols="12" md="7" v-if="!$vuetify.display.mobile || selectedMobileView === 1">
         <v-card class="map-card">
             <Map
               height="100%"
@@ -30,49 +32,118 @@
               :zoom="4"
               >
               <Marker v-for="destination in destinationModels" :coordinates="[destination.airportLongitude, destination.airportLatitude]">
-                <Popup :offset="25" @open="selectedDestination = destination">
-                  <div class="text-overline">{{ destination.airportName }}</div>
-                  <div>flights/day: {{ destination.dailyFlightCount }}</div>
+                <Popup :offset="25">
+                  <b>{{destination.cityName}}</b><br/>
+                  {{ destination.airportName }}<br/>
+                  <b>{{ destination.dailyFlightCount }} flights</b>
+                  <div v-for="airline in destination.airlines">
+                    {{ airline }}
+                  </div>
+                  <br/>
+                  <button @click="selectedDestination = destination" style="color: blue">Details</button>
                 </Popup>
               </Marker>
             </Map>
 
           </v-card>
-      </v-col>
-      <v-col cols="12" md="2">
-       
-        <v-card v-if="selectedDestination" :title="selectedDestination.cityName" :subtitle="selectedDestination.airportName" class="main-component">
-          <template v-slot:append>
-            <v-chip :text="selectedDestination.dailyFlightCount" color="primary" size="large" variant="elevated"></v-chip>
-          </template>
+      </v-col>   
+      <v-col cols="12" md="2" v-if="!$vuetify.display.mobile || selectedMobileView === 2">
+        <v-card>
           <v-card-text>
-            <div class="text-overline">Served by airlines</div>
-            <v-list>
-              <v-list-item v-for="stat in selectedDestination.airlineStatistics"
-                :title="stat.airline">
-                <template v-slot:append>
-                  <v-chip :text="`${stat.percentage}%`"></v-chip>
-                </template>                
-              </v-list-item>
-            </v-list>
-
-            <div class="text-overline">Flights</div>
-            <v-list>
-              <v-list-item v-for="flight in selectedDestination.flights"
-                :title="`${flight.airlineName} ${flight.flightNumber}`"
-                :subtitle="flight.airlineOperatedBy === '' ? '' : `Operated by ${flight.airlineOperatedBy}`">
-                <template v-slot:append>
-                  {{ getFlightOnTimeStatus(flight.status) }}
-                </template>
-                <v-chip label :text="getFlightStatus(flight.status)" :variant="getFlightStatusChipVariant(getFlightStatus(flight.status))" :color="getFlightStatusColor(flight.status)"></v-chip>
-                
-              </v-list-item>
+            <div class="text-overline">On Time Index</div>
+            <StatusBreakdownChart :flights="flightModels"></StatusBreakdownChart>
+          </v-card-text>
+        </v-card>        
+        <v-card class="mt-2">
+          <v-card-text>
+            <div class="text-overline">Served by Airlines</div>
+            <v-list style="height:55vh">
+              <AirlineBreakdownChart :airlineStatisticsModel="airlineStatisticsModel"></AirlineBreakdownChart>
             </v-list>
           </v-card-text>
         </v-card>
       </v-col>
     </v-row>
+    <v-bottom-navigation 
+      v-if="$vuetify.display.mobile" 
+      v-model="selectedMobileView">
+      <v-btn>
+        <v-icon icon="mdi-format-list-bulleted"></v-icon>
+        List
+      </v-btn>
+      <v-btn>
+        <v-icon icon="mdi-map-marker-outline"></v-icon>
+        Map
+      </v-btn>
+      <v-btn>
+        <v-icon icon="mdi-gauge"></v-icon>
+        Summary
+      </v-btn>
+    </v-bottom-navigation>
   </v-container>
+
+  <v-dialog
+    v-model="showSelectedDestinationDetail"
+    fullscreen>
+    <v-card 
+      v-if="selectedDestination"
+      :title="selectedDestination?.cityName"
+      :subtitle="selectedDestination?.airportName"
+      color="primary">
+        <template v-slot:append>
+          <v-icon icon="mdi-close" @click="showSelectedDestinationDetail = false"></v-icon>
+        </template>
+        <v-container fluid>
+          <v-row>
+            <v-col cols="12" md="3">
+              <v-card>
+                <v-card-text>
+                  <div class="text-overline">Served by airlines</div>
+                  <v-list>
+                    <v-list-item v-for="stat in selectedDestination.airlineStatisticsModel.airlineStatistics"
+                      :title="stat.airline">
+                      <template v-slot:append>
+                        <v-chip :text="`${stat.percentage}%`"></v-chip>
+                      </template>               
+                      <v-chip label size="small" color="secondary">
+                        {{ stat.dailyFlightCount }}
+                      </v-chip>
+                      Flights                      
+                    </v-list-item>
+                  </v-list>                  
+                </v-card-text>  
+              </v-card>
+              <v-card class="mt-2">
+                <v-card-text>
+                  <div class="text-overline">On Time Index</div>
+                  <StatusBreakdownChart :flights="selectedDestination.flights"></StatusBreakdownChart>
+                </v-card-text>
+              </v-card>
+              <WeatherCard class="mt-2" :cityName="selectedDestination.cityName"></WeatherCard>              
+            </v-col>
+            <v-col cols="12" md="9">
+              <v-card>
+                <v-card-text>
+                  <div class="text-overline">Flights</div>
+                  <FlightList :flights="selectedDestination.flights"></FlightList>                  
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
+       <!--  <v-tabs fixed-tabs>
+          <v-tab value="airlines">Airlines</v-tab>
+          <v-tab value="flights">Flights</v-tab>
+        </v-tabs>
+        <v-tabs-window v-model="selectedTab">
+          <v-tabs-window-item value="airlines">
+          </v-tabs-window-item>
+          <v-tabs-window-item value="flights"></v-tabs-window-item>
+        </v-tabs-window> -->
+        
+      
+    </v-card>
+  </v-dialog>
   
 </template>
 <script lang="ts" setup>
@@ -82,48 +153,29 @@ import flights from "../data/flights.json";
 import { computed, ref } from 'vue';
 import DestinationModel from '../models/DestinationModel';
 import FlightModel from '../models/FlightModel';
+import FlightList from "./FlightList.vue";
+import StatusBreakdownChart from './StatusBreakdownChart.vue';
+import WeatherCard from './WeatherCard.vue';
+import AirlineStatisticModel from "../models/AirlineStatisticModel";
+import AirlineBreakdownChart from './AirlineBreakdownChart.vue';
 
 const flightModels = computed<FlightModel[]>(() => flights.map(x => new FlightModel(x)));
 const destinationModels = computed<DestinationModel[]>(() => destinations.map(x => new DestinationModel(x, flightModels.value.filter(y => y.airportCode === x.airportCode))));
 const selectedDestination = ref<DestinationModel | undefined>(undefined);
+const selectedMobileView = ref(0);
 
-function getFlightOnTimeStatus(status: string): string {
-  const splits = status.split('/');
-  if (splits.length === 2) {
-    return splits[1].trim();
-  }
-
-  return status;
-}
-
-function getFlightStatus(status: string): string {
-  const splits = status.split('/');
-  if (splits.length > 0) {
-    return splits[0].trim();
-  }
-
-  return status;
-}
-
-function getFlightStatusChipVariant(status: string): "outlined" | "flat" {  
-  return ["Arrived", "Cancelled", "Landed"].includes(status) ? "flat" : "outlined";  
-}
-
-function getFlightStatusColor(status: string): string {
-  const splits = status.split('/');
-  var color = "";
-
-  for (var i = 0; i < splits.length; i++) {
-    if (color === "") {
-      if (splits[i].trim() === "Cancelled") color = "red";
-      if (splits[i].trim() === "Delayed") color = "orange";
-      if (splits[i].trim() === "On Time") color = "green";
+const showSelectedDestinationDetail = computed({
+  get(): boolean {
+    return selectedDestination.value !== undefined;
+  },
+  set(newValue: boolean) {
+    if (!newValue) {
+      selectedDestination.value = undefined;
     }
   }
-  
-  return color === "" ? "primary" : color;
-  
-}
+});
+
+const airlineStatisticsModel = computed(() => new AirlineStatisticModel(flightModels.value));
 
 </script>
 <style>
@@ -135,4 +187,5 @@ function getFlightStatusColor(status: string): string {
   width: 100%;
 }
 </style>
+
 
