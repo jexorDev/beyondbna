@@ -21,6 +21,5 @@ const vuetify = createVuetify({
 
 createApp(App)
   .use(vuetify)
-  .use(libregl, {  style:
-    'https://api.maptiler.com/maps/streets-v2/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',})
+  .use(libregl, { style: import.meta.env.VITE_MAPTILER_API_KEY })
   .mount('#app')
